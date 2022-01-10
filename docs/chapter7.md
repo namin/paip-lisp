@@ -2,10 +2,9 @@
 ## STUDENT: Solving Algebra Word Problems
 
 > *[This] is an example par excellence* of the power of using meaning to solve linguistic problems
-
+>
 > -[Marvin Minsky (1968)](B9780080571157500285.xhtml#bb0845)
-
-> MIT computer scientist
+> <br>MIT computer scientist
 
 STUDENT was another early language understanding program, written by Daniel Bobrow as his Ph.D.
 research project in 1964.
