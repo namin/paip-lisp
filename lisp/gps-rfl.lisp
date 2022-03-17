@@ -28,7 +28,7 @@
 (defun reflected? (c)
   (and (consp c) (consp (cdr c)) (consp (cadr c)) (eql 'reflect (caadr c))))
 
-(reflected? '(executing (reflect '(a b c) '(d))))
+(reflected? '(executing (reflect (a b c) (d))))
 
 (defun already-reflected? (cs)
   (some #'reflected? cs))
