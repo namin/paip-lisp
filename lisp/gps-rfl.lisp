@@ -36,13 +36,10 @@
 (defun gps-rfl (state goals)
   (let ((r (achieve-goals state goals)))
     (when r
-      (remove-if
-       #'atom
-       (if (already-reflected? r)
-           r
-           (let ((rfl-op (extract-op state goals)))
-             (use (cons rfl-op *ops*))
-             r))))))
+      (unless (already-reflected? r)
+        (let ((rfl-op (extract-op state goals)))
+          (use (cons rfl-op *ops*))))
+      (remove-if #'atom r))))
 
 (use *banana-ops*)
 (gps-rfl '(foo at-door on-floor empty-handed hungry chair-at-door) '(not-hungry))
